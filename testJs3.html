@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            
+           
+            function ageCheck(){
+                var date=document.getElementById("dob").value;
+                var date1=new Date();
+                var year1=date1.getFullYear();
+                var date2=new Date(date);
+                var year2=date2.getFullYear();
+                
+                if(year1-year2 < 18){
+                    alert("Your age is less than 18");
+                }
+                else{
+                    alert("Your age is greater than 18");
+                }
+            }
+
+           
+        
+        </script>
+    </head>
+    <body>
+        Enter Your Birthday Date:<br>
+         <input type="date" id="dob"><br>
+       
+        <button onclick="ageCheck()">Check</button>
+       
+    </body>
+</html>
