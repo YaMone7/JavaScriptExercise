@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    <script>
+        function add(){
+            var t= document.getElementById('task').value;
+            var lis=document.getElementById('list');
+            var l=document.createElement('li');
+
+            var n= document.createElement('input');
+            n.value = t;
+            l.appendChild(n);
+            lis.appendChild(l);
+            document.getElementById('task').value = "";
+
+            var btn=document.createElement("Button");
+            btn.innerHTML="Remove";
+            l.appendChild(btn);
+
+            btn.addEventListener("click",function(){
+                l.remove();
+            });
+            
+        }  
+       
+    </script>
+    </head>
+    <body>
+
+        <label>Task Name</label>
+        <input type = "text" id = "task" placeholder="Enter your Task...">
+        <button type="submit" onclick="add()">Add</button><br>
+        <p>Adding Task:</p>
+        <ul id="list" style="list-style-type: none;">
+
+        
+    
+    </body>
+</html>
+
+
