@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            .column{
+                float: left;
+                width: 20%;
+                padding: 15px;
+            }
+            .column img{
+                opacity: 0.7;
+                cursor: pointer;
+            }
+            .column a :hover{
+                opacity: 1;
+            }
+            .row :after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+           .imgbtn{
+               position: absolute;
+               top: 10px;
+               right: 15px;
+               cursor: pointer;
+           }
+
+           
+                </style>
+                <script>
+                    function myFunction(imgs) {
+                      var expandImg = document.getElementById("expandedImg");
+                      expandImg.src = imgs.src;
+                       expandImg.parentElement.style.display = "block";
+                    }
+                    </script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="column">
+                <img src="dream.jpg" alt="House" style="width: 50%;" onclick="myFunction(this);"><br><br>
+                <img src="dreamC.jpg" alt="House" style="width: 50%;" onclick="myFunction(this);"><br><br>
+                <img src="alco4.jpg" alt="House" style="width: 50%;" onclick="myFunction(this);">
+
+
+            </div>
+
+            
+  <span onclick="this.parentElement.style.display='none'" class="closebtn"></span>
+  <img id="expandedImg" style="width:70%">
+
+        </div>
+
+
+
+
+
+
+
+    </body>
+</html>
